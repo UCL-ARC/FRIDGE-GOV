@@ -13,7 +13,80 @@ This document defines the standardised process for establishing and operating Sa
 
 **Note:** Before a Safe project can be initiated, the TRE Operator must have completed the [Safe Setting Process](FRIDGE_Safe_Setting_Process.md) and received Safe Setting approval to host TREs on the FRIDGE platform.
 
-## 2. Key Organisations and Roles
+## 2. Process Flow Diagram
+
+```mermaid
+graph TD
+    Start([PI Initiates Project]) --> Submit[1.1: PI Submits Application<br/>to Data Provider]
+    
+    Submit --> ParallelStart{Metadata Triggers<br/>Parallel Reviews}
+    
+    ParallelStart --> DataReview[1.2A: Data Provider Review<br/>- Assess data access request<br/>- Verify legal basis<br/>- Check ethics approvals]
+    ParallelStart --> ResourceReview[1.2B: Resource Allocator Review<br/>- Review compute requirements<br/>- Check AIRR alignment<br/>- Assess resource availability]
+    
+    DataReview --> DataDecision{Data Provider<br/>Approval?}
+    ResourceReview --> ResourceDecision{Resource<br/>Approval?}
+    
+    DataDecision -->|Reject| End1([Project Rejected])
+    ResourceDecision -->|Reject| End1
+    
+    DataDecision -->|Approve| PrepareAgreement[Prepare Data Access<br/>Agreement/Attestation]
+    ResourceDecision -->|Approve| ReserveResources[Reserve Compute<br/>Resources]
+    
+    PrepareAgreement --> BothApproved{Both<br/>Approvals?}
+    ReserveResources --> BothApproved
+    
+    BothApproved -->|No| End1
+    BothApproved -->|Yes| SignAgreement[1.3: PI Signs Agreement]
+    
+    SignAgreement --> VerifySign[Data Provider Verifies<br/>Signed Agreement]
+    VerifySign --> TriggerProv[Trigger Provisioning Process]
+    
+    TriggerProv --> ProvisionFrontDoor[2.1: Front Door TRE Provisioning<br/>- Create TRE workspace<br/>- Setup job submission interface<br/>- Connect to FRIDGE platform]
+    
+    ProvisionFrontDoor --> ProvisionFRIDGE[2.2: FRIDGE Hosting Platform Provisioning<br/>- Allocate compute on AIRR<br/>- Create project space<br/>- Transfer data<br/>- Configure security]
+    
+    ProvisionFrontDoor --> ProjectReady[Project Environment Ready]
+    
+    ProjectReady -.->|Separate Process| OnboardingProcess[Researcher Onboarding Process<br/>See Section 8]
+    
+    OnboardingProcess -.-> AccessGranted[Researcher Access Granted<br/>via Front Door TRE]
+    
+    AccessGranted --> Research[3.1: Ongoing Research<br/>- Analysis in Front Door TRE<br/>- Job submission to FRIDGE<br/>- Output review requests]
+    
+    Research --> OutputReview[3.2: Output Review<br/>- TRE Operator security check<br/>- Data Provider disclosure review]
+    
+    OutputReview --> OutputDecision{Output<br/>Approved?}
+    OutputDecision -->|No| Research
+    OutputDecision -->|Yes| ReleaseOutput[Release Output to PI]
+    
+    ReleaseOutput --> ContinueResearch{Continue<br/>Research?}
+    ContinueResearch -->|Yes| Research
+    ContinueResearch -->|No| ProjectComplete[4.1: Project Completion<br/>- Final audits<br/>- Archive documentation]
+    
+    ProjectComplete --> Decommission[4.2: Environment Decommissioning<br/>- Revoke access<br/>- Delete data<br/>- Release resources]
+    
+    Decommission --> End2([Project Closed])
+    
+    style ParallelStart fill:#ffeb99
+    style BothApproved fill:#ffeb99
+    style DataReview fill:#cce5ff
+    style ResourceReview fill:#cce5ff
+    style ProvisionFRIDGE fill:#d4edda
+    style ProvisionFrontDoor fill:#d4edda
+    style AccessGranted fill:#90EE90
+```
+
+**Diagram Legend:**
+- **Yellow boxes**: Decision/coordination points
+- **Light blue boxes**: Parallel review processes
+- **Light green boxes**: Provisioning activities
+- **Bright green box**: Access granted milestone
+- **Dotted lines**: Separate process (not part of main Safe project flow)
+
+---
+
+## 3. Key Organisations and Roles
 
 See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extension_Architecture.md#2-roles) for detailed role definitions.
 
@@ -52,7 +125,7 @@ See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extensi
   - Monitor physical infrastructure security and performance
 - **Accountable for:** [FRIDGE TRE Hosting Boundary](FRIDGE_Governance_Extension_Architecture.md#25-fridge-tre-hosting-boundary), [FRIDGE TRE Boundary](FRIDGE_Governance_Extension_Architecture.md#26-fridge-tre-boundary) (shared)
 
-## 3. Safe Project Lifecycle Process
+## 4. Safe Project Lifecycle Process
 
 ### Phase 1: Project Initiation
 
@@ -286,7 +359,7 @@ See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extensi
 
 ---
 
-## 4. Governance and Escalation
+## 5. Governance and Escalation
 
 ### 4.1 Operational Management Group
 **Composition:** Representatives from all four organisations  
@@ -302,7 +375,7 @@ See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extensi
 **Level 2:** Operational Management Group (cross-organizational issues)  
 **Level 3:** Top Management (governance boundary issues)
 
-## 5. Quality Assurance and Compliance
+## 6. Quality Assurance and Compliance
 
 ### 5.1 Continuous Monitoring
 - **TRE Operator:** Technical security monitoring, infrastructure health
@@ -322,7 +395,7 @@ All four organisations must maintain:
 - Incident reports
 - Change management records
 
-## 6. Key Success Factors
+## 7. Key Success Factors
 
 1. **Clear Communication:** Regular coordination between all four organisations
 2. **Defined Responsibilities:** Unambiguous accountability for each process step
@@ -330,94 +403,23 @@ All four organisations must maintain:
 4. **Automated Controls:** Where possible, technical enforcement of policies
 5. **Continuous Improvement:** Regular process reviews and updates
 
-## 7. Appendices
-
-### Appendix A: Process Flow Diagram
-
-```mermaid
-graph TD
-    Start([PI Initiates Project]) --> Submit[1.1: PI Submits Application<br/>to Data Provider]
-    
-    Submit --> ParallelStart{Metadata Triggers<br/>Parallel Reviews}
-    
-    ParallelStart --> DataReview[1.2A: Data Provider Review<br/>- Assess data access request<br/>- Verify legal basis<br/>- Check ethics approvals]
-    ParallelStart --> ResourceReview[1.2B: Resource Allocator Review<br/>- Review compute requirements<br/>- Check AIRR alignment<br/>- Assess resource availability]
-    
-    DataReview --> DataDecision{Data Provider<br/>Approval?}
-    ResourceReview --> ResourceDecision{Resource<br/>Approval?}
-    
-    DataDecision -->|Reject| End1([Project Rejected])
-    ResourceDecision -->|Reject| End1
-    
-    DataDecision -->|Approve| PrepareAgreement[Prepare Data Access<br/>Agreement/Attestation]
-    ResourceDecision -->|Approve| ReserveResources[Reserve Compute<br/>Resources]
-    
-    PrepareAgreement --> BothApproved{Both<br/>Approvals?}
-    ReserveResources --> BothApproved
-    
-    BothApproved -->|No| End1
-    BothApproved -->|Yes| SignAgreement[1.3: PI Signs Agreement]
-    
-    SignAgreement --> VerifySign[Data Provider Verifies<br/>Signed Agreement]
-    VerifySign --> TriggerProv[Trigger Provisioning Process]
-    
-    TriggerProv --> ProvisionFrontDoor[2.1: Front Door TRE Provisioning<br/>- Create TRE workspace<br/>- Setup job submission interface<br/>- Connect to FRIDGE platform]
-    
-    ProvisionFrontDoor --> ProvisionFRIDGE[2.2: FRIDGE Hosting Platform Provisioning<br/>- Allocate compute on AIRR<br/>- Create project space<br/>- Transfer data<br/>- Configure security]
-    
-    ProvisionFrontDoor --> ProjectReady[Project Environment Ready]
-    
-    ProjectReady -.->|Separate Process| OnboardingProcess[Researcher Onboarding Process<br/>See Appendix E]
-    
-    OnboardingProcess -.-> AccessGranted[Researcher Access Granted<br/>via Front Door TRE]
-    
-    AccessGranted --> Research[3.1: Ongoing Research<br/>- Analysis in Front Door TRE<br/>- Job submission to FRIDGE<br/>- Output review requests]
-    
-    Research --> OutputReview[3.2: Output Review<br/>- TRE Operator security check<br/>- Data Provider disclosure review]
-    
-    OutputReview --> OutputDecision{Output<br/>Approved?}
-    OutputDecision -->|No| Research
-    OutputDecision -->|Yes| ReleaseOutput[Release Output to PI]
-    
-    ReleaseOutput --> ContinueResearch{Continue<br/>Research?}
-    ContinueResearch -->|Yes| Research
-    ContinueResearch -->|No| ProjectComplete[4.1: Project Completion<br/>- Final audits<br/>- Archive documentation]
-    
-    ProjectComplete --> Decommission[4.2: Environment Decommissioning<br/>- Revoke access<br/>- Delete data<br/>- Release resources]
-    
-    Decommission --> End2([Project Closed])
-    
-    style ParallelStart fill:#ffeb99
-    style BothApproved fill:#ffeb99
-    style DataReview fill:#cce5ff
-    style ResourceReview fill:#cce5ff
-    style ProvisionFRIDGE fill:#d4edda
-    style ProvisionFrontDoor fill:#d4edda
-    style AccessGranted fill:#90EE90
-```
-
-#### Diagram Legend:
-- **Yellow boxes**: Decision/coordination points
-- **Light blue boxes**: Parallel review processes
-- **Light green boxes**: Provisioning activities
-- **Bright green box**: Access granted milestone
-- **Dotted lines**: Separate process (not part of main Safe project flow)
+## 8. Appendices
 
 **Note:** "Authorisation" and "organisation" use UK English spelling throughout this document.
 
-### Appendix B: Document Templates
+### Appendix A: Document Templates
 - Project Proposal Template
 - Governance Framework Template
 - Output Review Request Template
 - Project Closure Report Template
 
-### Appendix C: Contact Points
+### Appendix B: Contact Points
 [To be defined per implementation]
 
-### Appendix D: Compliance Checklist
+### Appendix C: Compliance Checklist
 [To be developed based on SATRE and NHS standards]
 
-### Appendix E: Researcher Onboarding Process
+### Appendix D: Researcher Onboarding Process
 
 **Note:** This is a separate process that runs independently from the Safe project provisioning workflow. Researchers must complete onboarding before accessing any project data.
 

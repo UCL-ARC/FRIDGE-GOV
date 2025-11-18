@@ -10,7 +10,37 @@
 
 This document defines the process for approving and onboarding Safe researchers within the FRIDGE infrastructure. Safe researchers must complete attestation and training requirements before accessing sensitive data within a TRE.
 
-## 2. Key Organisations and Roles
+## 2. Process Flow Diagram
+
+```mermaid
+graph TD
+    Start([Researcher nominated or PI initiates process]) --> Approval[Step 1: Approval<br/>Data Provider or TRE Operator]
+    
+    Approval --> Decision{Approved?}
+    
+    Decision -->|No| End1([Safe Researcher Status Denied])
+    Decision -->|Yes| Training[Step 2: Training & Attestation<br/>Complete Training & Sign Agreement]
+    
+    Training --> Access[Step 3: Access Activation<br/>TRE Operator Verifies & Provisions]
+    
+    Access --> Research[Step 4: Ongoing Compliance<br/>Monitor & Refresh Training]
+    
+    Research --> Continue{Access<br/>Required/Permitted?}
+    
+    Continue -->|Yes| Research
+    Continue -->|No| Revoke[Revoke Access]
+    
+    Revoke --> End2([Access Terminated])
+    
+    style Decision fill:#ffeb99
+    style Continue fill:#ffeb99
+    style Training fill:#cce5ff
+    style Access fill:#90EE90
+```
+
+---
+
+## 3. Key Organisations and Roles
 
 See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extension_Architecture.md#2-roles) for detailed role definitions.
 
@@ -27,7 +57,7 @@ See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extensi
 - Complete required training and attestation
 - Maintain ongoing compliance
 
-## 3. Safe Researcher Process
+## 4. Safe Researcher Process
 
 ### Step 1: Researcher Approval
 **Lead:** Data Provider (or delegated to TRE Operator)
@@ -85,7 +115,7 @@ See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extensi
 
 ---
 
-## 4. Delegation of Approval Authority
+## 5. Delegation of Approval Authority
 
 The Data Provider may delegate researcher approval to the TRE Operator Organisation. Delegation must be:
 
@@ -94,37 +124,6 @@ The Data Provider may delegate researcher approval to the TRE Operator Organisat
 - **Monitored:** Regular audits and reporting to Data Provider
 
 Data Provider retains ultimate accountability.
-
----
-
-## 5. Process Flow Diagram
-
-```mermaid
-graph TD
-    Start([Researcher nominated or PI initiates process]) --> Approval[Step 1: Approval<br/>Data Provider or TRE Operator]
-    
-    Approval --> Decision{Approved?}
-    
-    Decision -->|No| End1([Safe Researcher Status Denied])
-    Decision -->|Yes| Training[Step 2: Training & Attestation<br/>Complete Training & Sign Agreement]
-    
-    Training --> Access[Step 3: Access Activation<br/>TRE Operator Verifies & Provisions]
-    
-    Access --> Research[Step 4: Ongoing Compliance<br/>Monitor & Refresh Training]
-    
-    Research --> Continue{Access<br/>Required/Permitted?}
-    
-    Continue -->|Yes| Research
-    Continue -->|No| Revoke[Revoke Access]
-    
-    Revoke --> End2([Access Terminated])
-    
-    style Decision fill:#ffeb99
-    style Continue fill:#ffeb99
-    style Training fill:#cce5ff
-    style Attestation fill:#cce5ff
-    style Access fill:#90EE90
-```
 
 ---
 

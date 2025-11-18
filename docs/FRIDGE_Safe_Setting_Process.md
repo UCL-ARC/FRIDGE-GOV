@@ -11,7 +11,46 @@ This document defines the process for approving a TRE Operator to host a TRE on 
 
 **Note:** This process only needs to be completed once when a TRE Operator first uses FRIDGE, or if they change their deployment pattern.
 
-## 2. Key Organisations and Roles
+## 2. Process Flow Diagram
+
+```mermaid
+graph TD
+    Start([TRE Operator Requests<br/>Safe Setting]) --> Request[Step 1: Request Submission<br/>Specify Pattern & Architecture]
+    
+    Request --> Review[Step 2: Initial Review<br/>FRIDGE Hosting & Resource Allocator]
+    
+    Review --> Decision1{Approved for<br/>Test?}
+    
+    Decision1 -->|No| End1([Request Rejected])
+    Decision1 -->|Yes| TestDeploy[Step 3: Test Deployment<br/>Non-sensitive Data Only]
+    
+    TestDeploy --> Audit[Step 4: Audit & Pen Test<br/>Security Assessment]
+    
+    Audit --> FinalApproval[Step 5: Final Approval<br/>FRIDGE Hosting & Resource Allocator]
+    
+    FinalApproval --> Decision2{Safe Setting<br/>Approved?}
+    
+    Decision2 -->|No| TestDeploy
+    Decision2 -->|Yes| SafeSetting[Safe Setting Status Granted]
+    
+    SafeSetting --> Ongoing[Step 6: Ongoing Compliance<br/>Regular Reviews]
+    
+    Ongoing --> PatternChange{Deployment<br/>Pattern<br/>Changed?}
+    
+    PatternChange -->|Yes| Request
+    PatternChange -->|No| Ongoing
+    
+    style Decision1 fill:#ffeb99
+    style Decision2 fill:#ffeb99
+    style PatternChange fill:#ffeb99
+    style TestDeploy fill:#cce5ff
+    style Audit fill:#cce5ff
+    style SafeSetting fill:#90EE90
+```
+
+---
+
+## 3. Key Organisations and Roles
 
 See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extension_Architecture.md#2-roles) for detailed role definitions.
 
@@ -33,7 +72,7 @@ See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extensi
 - Approve Safe Setting status
 - Allocate resources for test deployment
 
-## 3. Deployment Patterns
+## 4. Deployment Patterns
 
 ### Pattern 1: FRIDGE Remote Job Submission TRE
 - Front Door TRE with remote job submission to FRIDGE compute
@@ -45,7 +84,7 @@ See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extensi
 - All components (workspace, airlock etc.) on FRIDGE
 - Direct researcher access to FRIDGE-hosted environment
 
-## 4. Safe Setting Process (6 Steps)
+## 5. Safe Setting Process (6 Steps)
 
 ### Step 1: Request Submission
 **Lead:** TRE Operator Organisation

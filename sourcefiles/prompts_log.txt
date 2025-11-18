@@ -135,3 +135,15 @@ add the alan turinginstitute ti the project partners
 Prompt 35:
 remove **UCL Research IT Services:** and replace with Advanced Research Computing Centre | Advanced Research Computing - UCL – University College London 
 
+
+Prompt 36:
+I would like to move the process flow digrams to the top of each of the process pages and renumber
+
+
+Prompt 37:
+do the same with the safe researcher and projects process docs
+
+
+Prompt 38:
+reduce section 5  of docs\FRIDGE_Implementation_Guide.md to a brief summary
+

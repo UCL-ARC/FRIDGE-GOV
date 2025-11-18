@@ -178,60 +178,16 @@ This guide provides a step-by-step approach to implementing the FRIDGE (Federate
 
 **Ongoing**
 
-### Step 5.1: Establish Monitoring and Reporting
+**Overview:** Once FRIDGE is operational, establish monitoring systems, conduct regular reviews, and continuously improve processes based on lessons learned.
 
-**Actions:**
-1. Set up monitoring systems for each organisation:
-   - TRE Operator: Technical security monitoring
-   - Data Provider: Data access auditing
-   - Resource Allocator: Resource utilisation tracking
-   - FRIDGE Hosting: Infrastructure security monitoring
+**Key Activities:**
+- **Monitoring:** Each organisation monitors their area of responsibility (technical security, data access, resource utilisation, infrastructure security)
+- **Regular Reviews:** Conduct compliance audits, governance framework reviews, and post-project retrospectives
+- **Continuous Improvement:** Review feedback, propose improvements, obtain Operational Management Group approval, and update documentation
 
-2. Define reporting requirements and schedules
-3. Create reporting templates
-
-**Outputs:**
-- Monitoring systems
-- Reporting schedule
-- Report templates
-
-**Reference:** [Safe Project Process - Section 5.1](FRIDGE_SAFE_Project_Process.md#51-continuous-monitoring)
-
----
-
-### Step 5.2: Conduct Regular Reviews
-
-**Actions:**
-1. Schedule and conduct:
-   - Compliance audits
-   - Governance framework reviews
-   - Post-project retrospectives
-
-2. Document lessons learned
-3. Identify improvement opportunities
-
-**Outputs:**
-- Audit reports
-- Review findings
-- Improvement recommendations
-
-**Reference:** [Governing FRIDGE - Section 7](Governing_FRIDGE.md#7-continuous-improvement)
-
----
-
-### Step 5.3: Adapt and Improve
-
-**Actions:**
-1. Review lessons learned and feedback
-2. Propose process improvements
-3. Obtain Operational Management Group approval
-4. Implement approved changes
-5. Update documentation
-
-**Outputs:**
-- Process improvement proposals
-- Updated procedures
-- Revised documentation
+**References:**
+- [Safe Project Process - Section 6](FRIDGE_SAFE_Project_Process.md#6-quality-assurance-and-compliance)
+- [Governing FRIDGE - Section 7](Governing_FRIDGE.md#7-continuous-improvement)
 
 ---
 
@@ -285,15 +241,4 @@ This guide provides a step-by-step approach to implementing the FRIDGE (Federate
 
 ---
 
-## 5. Implementation Dependencies
-
-| Phase | Dependencies |
-|-------|--------------|
-| Phase 1: Governance Structure | None |
-| Phase 2: Safe Setting Process | Phase 1 complete |
-| Phase 3: Safe Project Process | Phase 2 complete |
-| Phase 4: Safe Researcher Process | Phase 3 complete |
-| Phase 5: Operationalise | Phases 1-4 complete |
-
-**Note:** Multiple TRE Operators can complete Safe Setting Process in parallel after Phase 1.
 
