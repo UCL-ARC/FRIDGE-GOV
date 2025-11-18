@@ -3,12 +3,15 @@
 **Version:** 1.0  
 **Target Infrastructure:** UK AIRR (Dawn, Isambard-AI)  
 **Compliance:** SATRE Specification, NHS DSP Toolkit  
-**Target Duration:** 48 hours
-**Frequency:** Once per researcher
+**Target Duration:** 48 hours  
+**Frequency:** Once per researcher  
+**Status:** Prerequisite - typically already in place
 
 ## 1. Overview
 
 This document defines the process for approving and onboarding Safe researchers within the FRIDGE infrastructure. Safe researchers must complete attestation and training requirements before accessing sensitive data within a TRE.
+
+**Note:** Most Data Providers and TRE Operators already have researcher approval and onboarding processes in place. This document provides the requirements for FRIDGE, which can be used to review and adapt existing processes or implement new ones if needed.
 
 ## 2. Process Flow Diagram
 

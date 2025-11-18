@@ -10,11 +10,28 @@ This guide provides a step-by-step approach to implementing the FRIDGE (Federate
 
 ## 2. Implementation Phases
 
+### Phase 0: Safe Researcher Process (Prerequisite)
 ### Phase 1: Establish Governance Structure
 ### Phase 2: Implement Safe Setting Process
 ### Phase 3: Implement Safe Project Process
-### Phase 4: Implement Safe Researcher Process
-### Phase 5: Operationalise and Continuous Improvement
+### Phase 4: Operationalise and Continuous Improvement
+
+---
+
+## Phase 0: Safe Researcher Process (Prerequisite)
+
+**Objective:** Verify or establish Safe researcher approval and onboarding process
+
+**Key Implementation Tasks:**
+- Confirm attestation/agreement signing process in place and valid for governance extension
+- Confirm suitable training in place
+- Validate access provisioning workflows
+
+**Critical Success Factors:**
+- Process operational before Safe projects begin
+- Clear approval criteria and delegation agreements (if applicable)
+
+**Full Process Documentation:** [Safe Researcher Process](FRIDGE_Safe_Researcher_Process.md)
 
 ---
 
@@ -147,32 +164,7 @@ This guide provides a step-by-step approach to implementing the FRIDGE (Federate
 
 ---
 
-## Phase 4: Implement Safe Researcher Process
-
-**Objective:** Enable rapid approval and onboarding of Safe researchers
-
-**Prerequisites:** Safe Project Process established
-
-**Overview:** The Safe Researcher Process enables researchers to access sensitive data after completing training and attestation. Data Provider approves researchers (or delegates to TRE Operator), and TRE Operator provisions access.
-
-**Key Implementation Tasks:**
-- Develop Safe researcher training programme and assessment
-- Create attestation template and digital signature system
-- Establish access provisioning workflows
-- Consider delegation arrangements (Data Provider to TRE Operator)
-
-**Critical Success Factors:**
-- Comprehensive training materials
-- Streamlined attestation process
-- Efficient account provisioning
-- Clear delegation agreement (if applicable)
-- Achieve rapid turnaround for researcher onboarding
-
-**Full Process Documentation:** [Safe Researcher Process](FRIDGE_Safe_Researcher_Process.md)
-
----
-
-## Phase 5: Operationalise and Continuous Improvement
+## Phase 4: Operationalise and Continuous Improvement
 
 **Objective:** Maintain and improve FRIDGE operations
 
@@ -211,11 +203,12 @@ This guide provides a step-by-step approach to implementing the FRIDGE (Federate
 - [ ] Provisioning procedures established
 - [ ] At least one Safe project successfully provisioned
 
-### Safe Researcher Process
-- [ ] Training programme developed and delivered
+### Safe Researcher Process (Prerequisite)
+- [ ] Researcher approval process operational
+- [ ] Training programme in place
 - [ ] Attestation process operational
 - [ ] Access provisioning functioning
-- [ ] Target 48-hour turnaround achieved
+- [ ] Process reviewed against FRIDGE requirements
 
 ### Operations
 - [ ] Monitoring systems operational

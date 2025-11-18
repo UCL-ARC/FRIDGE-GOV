@@ -147,3 +147,11 @@ do the same with the safe researcher and projects process docs
 Prompt 38:
 reduce section 5  of docs\FRIDGE_Implementation_Guide.md to a brief summary
 
+
+Prompt 39:
+in the implementation guide the safe researcher process is listed as phase 4. this should actually be a phase 0. it is likely to be in place already and used by the data provider, tre provider org or both. can you change the implementation guide and process doc to reflext this
+
+
+Prompt 40:
+make the safe researcher process section in the implementation guide aligned to the other processes and make it shorter. it should have an objecitve section not overview
+
