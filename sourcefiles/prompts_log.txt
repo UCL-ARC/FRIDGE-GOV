@@ -163,3 +163,7 @@ re-order the Roles Catalogue in the following way. TRE Operator org, fridge host
 Prompt 42:
 add a definition for the Operational Management group from the docs\Governing_FRIDGE.md document into the roles catalogue table in docs\FRIDGE_Governance_Extension_Architecture.md after Top management and before PI
 
+
+Prompt 43:
+add links to tyhe relevant processes to the table
+
