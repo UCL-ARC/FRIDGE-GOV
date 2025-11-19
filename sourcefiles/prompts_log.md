@@ -1,189 +1,156 @@
-FRIDGE Project - User Prompts Log
-===================================
+# FRIDGE Project - User Prompts Log
 
-Prompt 1:
+This document captures all prompts used during the development of the FRIDGE governance framework documentation.
+
+---
+
+## Prompt 1
 I am working on a project called FRIDGE FRIDGE: Federated Research Infrastructure by Data Governance Extension. Using sensitive data to develop AI models involves carefully isolating parts of large AI supercomputers as Trusted Research Environments (TREs) so that only approved researchers can safely access them for their research. FRIDGE aims to explore this possibility by creating a ready-to-use TRE that meets the SATRE specification (developed as part of the DARE UK Phase 1 Driver Projects and enhanced by TREvolution) on the AIRR. This will enable the secure use of sensitive data to develop AI models for research that benefits the public while ensuring strict information governance.The TRE will be deployed across AIRR supercomputing systems, Dawn (Cambridge) and Isambard-AI (Bristol) and compatible with public cloud platforms, Microsoft Azure and Amazon AWS. Approved researchers will be able to access the TRE and analyse sensitive health data, which will help test and improve the TRE capabilities they use in a real-world setting.By establishing a robust governance framework, FRIDGE will enable AIRR to host secure TREs, ensuring that large-scale AI research can operate within secure, compliant environments and providing a testbed for other TREvolution capabilities.By the end of the project, FRIDGE will:Deliver a SATRE and NHS standards-compliant, cross-platform TRE on AIRR for AI-driven research using sensitive data.Enable secure isolation of AIRR computing resources, ensuring only authorised researchers access sensitive data under approved governance frameworks.Publish openly accessible software, legal agreements, and policies, allowing other research projects to deploy sensitive data securely on AIRR or similar supercomputing platforms.Establish AIRR TRE as a platform for testing and validating TREvolution capabilities within large-scale AI environments.
 
-Prompt 2:
+## Prompt 2
 For each prompt I make can you appent a file in the source files directory with my prompt please
 
-
-Prompt 3:
+## Prompt 3
 I need to write up some processes which would be standardised across all implementers of FRIDGE. we are targeting the UK national computing nfrastrctures AIRR. I would like design a standardised process for safe projects. This has 3 organisations (resource allocator) and TRE operator and Data provider. you can find the roles in the FRIDGE governance extension architecture markdown
 
-
-Prompt 4:
+## Prompt 4
 The safe project process is initiated by a principle investigator the data provider reviews the application and approves. the PI signs an atestation or agreement and gets access to data.
 
-
-Prompt 5:
+## Prompt 5
 metadata is passed to a paralelle process for resource allocation on the FRIDGE hosting facility which is reviewed by the resource allocator. if the project is approved for use of the fridge host resource is allocated. Data and project space is then created on the hosting platform and access provided via a front door TRE
 
-
-Prompt 6:
+## Prompt 6
 can you do me a mermaid diagram?
 
-
-Prompt 7:
+## Prompt 7
 Where you have 2.3 research onboarding. this is a separate process.
 
-
-Prompt 9:
+## Prompt 9
 Step 2.1 and step 2.2 are in the wrong order. Front Door TRE provisioning should be first
 
-
-Prompt 10:
+## Prompt 10
 SAFE is not  an acronym but a proper noun just capitalise the first letter
 
-
-Prompt 11:
+## Prompt 11
 There is another organisation to be included the FRIDGE Hosting org. Their key activities are provisioning and securing of resources
 
-
-Prompt 12:
+## Prompt 12
 can you change all spellings to UK english
 
-
-Prompt 13:
+## Prompt 13
 create a folder at the root called docs and move FRIDGE_Governance_Extension_Architecture.md and sourcefiles\FRIDGE_SAFE_Project_Process.md into it
 
-
-Prompt 14:
+## Prompt 14
 move the FRIDGE_Images into the docs folder and update all the links so the images still work
 
-
-Prompt 15:
+## Prompt 15
 I need to document a basic Safe Researcher process. create a new file in a similar format to docs\FRIDGE_SAFE_Project_Process.md and document the safe researcher process. use the contents of this document. The main steps are attestattion and training safe researchers are approved by the data provider or they may delegate this responsibilityto the TRE provider
 
-
-Prompt 16:
+## Prompt 16
 this shold be more consice, just include critical information
 
-
-Prompt 17:
+## Prompt 17
 The TRE operator mainly just checks the approvals and provides authentication information
 
-
-Prompt 18:
+## Prompt 18
 at the top of the documentation put target duration 48 hours for the whole process
 
-
-Prompt 19:
+## Prompt 19
 Now create one for Safe Setting Process. Main roles will be TRE operator that will submit a request to host a TRE on the FRIDGE hosting platform they will provide information on the pattern they are planning to use - FRIDGE remote job submission TRE or Full Stack TRE. The FRIDGE Hostig org and the Resource allocation org will apporve. There will bea test deployment using non-sensitive data, an audit and pen test and then approval from resource allocator and FRIDGE ostig org. This process only needs to be done once when the TRE operator first uses fridge or if they change the pattern being deployed
 
-
-Prompt 20:
+## Prompt 20
 remove step 5 to simplify
 
-
-Prompt 21:
+## Prompt 21
 update docs\FRIDGE_Governance_Extension_Architecture.md with all the roles added to the other docs in the Roles Catalogue table
 
-
-Prompt 22:
+## Prompt 22
 I need to link the establishment of boundaries in this document docs\FRIDGE_Governance_Extension_Architecture.md to the process that establishes them
 
-
-Prompt 23:
+## Prompt 23
 in the Safe project process add pre-requisits "Safe Setting Process complete 
 
-
-Prompt 24:
+## Prompt 24
 Now make links in the processes to the realevant roles and boundaries sections in the docs\FRIDGE_Governance_Extension_Architecture.md doc
 
-
-Prompt 25:
+## Prompt 25
 create a new doc called Governing_FRIDGE move section 3 from docs\FRIDGE_Governance_Extension_Architecture.md into it and use all the content in this doc and the processes to summarise  hiearchical structure with top management at the top and an operational management group underneath made up of the resource allocator, FRDIGE hosting org, TRE operator, Data provider and information goverance people
 
-
-Prompt 26:
+## Prompt 26
 create me a mermaid digram describing the structure in section 4
 
-
-Prompt 27:
+## Prompt 27
 simplify that mermaid diagram. remove the processes and just show the relationships between the groups.
 
-
-Prompt 28:
+## Prompt 28
 I don;t want to define how often anyone meets. take out anything specifiying monthly etc
 
-
-Prompt 29:
+## Prompt 29
 in the mermaid digram in section 4 remove all the escalation lines from the blu boxes and just have 1 from the yellow box
 
-
-Prompt 30:
+## Prompt 30
 Create an implementation guide in a new document starting wit hforming governance and then establishing the processes.
 
-
-Prompt 31:
+## Prompt 31
 the "safe" processes are well documented elsewhere reduce these to very short summaries in the implmentation guide with links to the main process docs
 
-
-Prompt 32:
+## Prompt 32
 remove all the timings
 
-
-Prompt 33:
+## Prompt 33
 create an executive summary in README.md summarising all the content. add a table with links to all the documents and a brief description. also add information about the creation of this repo with me as author at UCL and links to the relevant external site
 
-
-Prompt 34:
+## Prompt 34
 add the alan turinginstitute ti the project partners
 
-
-Prompt 35:
+## Prompt 35
 remove **UCL Research IT Services:** and replace with Advanced Research Computing Centre | Advanced Research Computing - UCL – University College London 
 
-
-Prompt 36:
+## Prompt 36
 I would like to move the process flow digrams to the top of each of the process pages and renumber
 
-
-Prompt 37:
+## Prompt 37
 do the same with the safe researcher and projects process docs
 
-
-Prompt 38:
+## Prompt 38
 reduce section 5  of docs\FRIDGE_Implementation_Guide.md to a brief summary
 
-
-Prompt 39:
+## Prompt 39
 in the implementation guide the safe researcher process is listed as phase 4. this should actually be a phase 0. it is likely to be in place already and used by the data provider, tre provider org or both. can you change the implementation guide and process doc to reflext this
 
-
-Prompt 40:
+## Prompt 40
 make the safe researcher process section in the implementation guide aligned to the other processes and make it shorter. it should have an objecitve section not overview
 
-
-Prompt 41:
+## Prompt 41
 re-order the Roles Catalogue in the following way. TRE Operator org, fridge hosting org, information asset owner, resource allocator, top management, PI, Data consumer, Safe researcher, job submitter and add a key starting with R01
 
-
-Prompt 42:
+## Prompt 42
 add a definition for the Operational Management group from the docs\Governing_FRIDGE.md document into the roles catalogue table in docs\FRIDGE_Governance_Extension_Architecture.md after Top management and before PI
 
-
-Prompt 43:
+## Prompt 43
 add links to tyhe relevant processes to the table
 
-
-Prompt 44:
+## Prompt 44
 re-number 2. Boundaries to 3 as I have added a section
 
-
-Prompt 45:
+## Prompt 45
 ensure numbering is correct in docs\FRIDGE_SAFE_Project_Process.md
 
-
-Prompt 46:
+## Prompt 46
 this section isn;t correct. ## 5. Governance Processes. This should briefly describe the process for setting up governance rather than the processes described in the rest of the repo. so, identify sponsorship within the data provider / asset owner org, TRE operator org and fridge hosting org, identify a risk framework and the establishment of the groups themselves
 
-
-Prompt 47:
+## Prompt 47
 Make this section shorter with brief descriptions of the stages
 
-
-Prompt 48:
+## Prompt 48
 move the diagram in docs\FRIDGE_Implementation_Guide.md to the  into the overview sction and renumber
 
+## Prompt 49
+move the diagram in docs\Governing_FRIDGE.mdto the  into the overview sction and renumber
+
+## Prompt 50
+change the promts.txt file into a markdown file and use this to capture prompts from this point on. under the about this repository put in a brief description of the tooling used including Kiro and the version of the model and a link ot the prompts
+
+---
+
+*This log is maintained to provide transparency about the development process and to help others understand how the documentation evolved.*

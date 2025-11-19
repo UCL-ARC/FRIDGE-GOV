@@ -111,6 +111,15 @@ This repository documents the governance framework and operational processes for
 - **Standards-compliant:** Meets SATRE and NHS requirements
 - **Practical:** Provides actionable guidance for implementation
 
+### Development Tooling
+
+This documentation was developed using:
+- **AI Assistant:** Kiro IDE
+- **Model:** Claude 3.7 Sonnet (Anthropic)
+- **Development Approach:** Iterative prompt-based documentation generation with human oversight and editing and domain expertise
+
+All prompts used during development are documented in [sourcefiles/prompts_log.md](sourcefiles/prompts_log.md) to provide transparency about the documentation creation process.
+
 ## Contact and Support
 
 For more information about FRIDGE:
