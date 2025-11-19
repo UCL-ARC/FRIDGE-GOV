@@ -49,14 +49,14 @@ The figure below shows the external boundaries for the extended governance of FR
 
 ### 2.1 Governance Boundary
 
-**Top Management is accountable for the governance boundary**. The governance boundary denotes the scope of risk and control across the entire system. This boundary may be synonymous with an ISO 27001 scope or similar and commonly an extension of an existing scope defined by the Front Door TRE Hosting organisation. The extension of an existing scope is likely to require [changes to the information governance framework](FRIDGE_Governance_Extension_Architecture.md#3-governance-of-the-fridge-federation) as shown below.
+**Top Management is accountable for the governance boundary**. The governance boundary denotes the scope of risk and control across the entire system. This boundary may be synonymous with an ISO 27001 scope or similar and commonly an extension of an existing scope defined by the Front Door TRE Hosting organisation. The extension of an existing scope is likely to require [changes to the information governance framework](./Governing_FRIDGE.md#4-governance-framework).
 
-**Established by:** [Safe Project Process - Step 1.3](FRIDGE_SAFE_Project_Process.md#step-13-agreement-signing-and-access-grant) when PI signs Data Access Agreement and governance boundary is agreed.
+**Established by:** [Safe setting Process](FRIDGE_Safe_Setting_Process.md#step-5-final-approval) when the agreement is formed between organisations on the secure hosting of the FRIDGE TRE.
 
 
 ### 2.2 Front Door TRE Hosting Boundary
 
-**The hosting organisation (Public or Private Cloud) is accountable for the TRE Hosting Boundary**. The TRE hosting boundary ensures the security of the underlying cloud platform hosting the TRE. The hosting org is therefore responsible for protecting the infrastructure that runs all of the cloud services. This infrastructure is composed of the hardware, software, networking, and facilities. See [AWS](https://aws.amazon.com/compliance/shared-responsibility-model/), [Azure](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility), [GCP](https://cloud.google.com/architecture/framework/security/shared-responsibility-shared-fate) for public cloud. UCL's TRE on private cloud supports a similar [shared responsibility model](https://isms.arc.ucl.ac.uk/rism02-roles_and_responsibilities/#6shared-responsibility-model) with the private cloud being part of the "UCL supporting Services".
+**The hosting organisation (Public or Private Cloud) is accountable for the Front Door TRE Hosting Boundary**. The TRE hosting boundary ensures the security of the underlying cloud platform hosting the TRE. The hosting org is therefore responsible for protecting the infrastructure that runs all of the cloud services. This infrastructure is composed of the hardware, software, networking, and facilities. See [AWS](https://aws.amazon.com/compliance/shared-responsibility-model/), [Azure](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility), [GCP](https://cloud.google.com/architecture/framework/security/shared-responsibility-shared-fate) for public cloud. UCL's TRE on private cloud supports a similar [shared responsibility model](https://isms.arc.ucl.ac.uk/rism02-roles_and_responsibilities/#6shared-responsibility-model) with the private cloud being part of the "UCL supporting Services".
 
 
 
@@ -67,23 +67,23 @@ The figure below shows the external boundaries for the extended governance of FR
 
 ### 2.4 TRE Project Boundary
 
-**The Project boundary responsibility is shared between the TRE operator organisation and the Information Asset Owner**. Applicable technical controls as documented in the [Computing Technology and Information Security pillar](https://satre-specification.readthedocs.io/en/stable/pillars/computing_technology.html#computing-technology-and-information-security) of SATRE are the responsibility of the TRE operator organisation. Controls within the Information Governance pillar of SATRE will largely be the responsibility of the Information Asset Owner.
+**The Project boundary responsibility is shared between the TRE operator organisation and the Information Asset Owner**. Applicable technical controls as documented in the [Computing Technology and Information Security pillar](https://satre-specification.readthedocs.io/en/stable/pillars/computing_technology.html#computing-technology-and-information-security) of SATRE are the responsibility of the TRE operator organisation. Controls within the Information Governance pillar of SATRE will largely be the responsibility of the Information Asset Owner. There may be explicit agreements in place to transfer these responsibilities from the Information Asset Owner to the TRE Operator where the operator is providing a managed service.
 
-The degree to which these controls are delegated down to research teams themselves will be dependant on the ["TRE Archetype"](https://github.com/sa-tre/satre-high-level-design/blob/main/Docs/TRE_Architypes.md). [Data provider archetypes](https://github.com/sa-tre/satre-high-level-design/blob/main/Docs/TRE_Architypes.md#21-data-provider-archetype) will take a much greater role in ensuring the security of the project boundary as they are the TRE platform and data provider. [Bring your own data archetype](https://github.com/sa-tre/satre-high-level-design/blob/main/Docs/TRE_Architypes.md#22-bring-your-own-data-archetype) operators delegate the security fo the project down to the the project team (usually a primary investigator).
+The degree to which these controls are delegated down to research teams themselves will be dependant on the ["TRE Archetype"](https://github.com/sa-tre/satre-high-level-design/blob/7039de11b11ca3e9ad07f10e683d9c3f037e2ebe/Docs/designs/TRE_Architypes.md). [Data provider archetypes](https://github.com/sa-tre/satre-high-level-design/blob/7039de11b11ca3e9ad07f10e683d9c3f037e2ebe/Docs/designs/TRE_Architypes.md#21-data-provider-archetype) will take a much greater role in ensuring the security of the project boundary as they are the TRE platform and data provider. [Bring your own data archetype](https://github.com/sa-tre/satre-high-level-design/blob/7039de11b11ca3e9ad07f10e683d9c3f037e2ebe/Docs/designs/TRE_Architypes.md#22-bring-your-own-data-archetype) operators delegate the security fo the project down to the the project team (usually a primary investigator).
 
 **Established by:** [Safe Project Process - Step 2.1](FRIDGE_SAFE_Project_Process.md#step-21-front-door-tre-access-provisioning) when Front Door TRE project workspace is provisioned and TRE Project Boundary is established.
 
 ### 2.5 FRIDGE TRE Hosting Boundary
 
-**The FRIDGE TRE Hosting Boundary responsibility is the responsibility of the FRIDGE TRE hosting organisation**. This boundary includes the physical infrastructure and the configuration of the hosting platform in line with "normal" operation.
+**The FRIDGE TRE Hosting Boundary responsibility is the responsibility of the FRIDGE TRE hosting organisation**. The FRIDGE TRE hosting boundary ensures the security of the underlying cloud platform hosting. The hosting org is therefore responsible for protecting the infrastructure that runs all of the cloud services. This infrastructure is composed of the hardware, software, networking, and facilities. The configuration of the hosting platform in line with "normal" operation with no adaptations for hosting a TRE. Any additional controls are applied to the FRIDGE TRE Boundary below.
 
 ### 2.6 FRIDGE TRE Boundary
 
 **The FRIDGE TRE boundary responsibility is shared between the TRE operator and the FRIDGE Hosting Organisation.** 
 
-Only part of the hosting organisation is within the governance boundary and therefore the TRE(s) inherit residual risk from the hosting organisation. Where there are shared components additional controls must be applied by the TRE operator organisation. For example encryption applied and managed by the TRE operator organisation applied to shared storage.
+Only part of the hosting organisation is within the governance boundary and therefore the TRE(s) inherit residual risk from the hosting organisation. Where there are shared components additional controls must be applied by the TRE operator organisation. For example encryption network policies managed by the hosting organisation to segregate the TRE from the rest of the platform.
 
-Information and data, accounts and identity, encryption and applications are the responsibility of the TRE organisation with network controls and resource allocation shared between the TRE operator and the FRIDGE hosting organisation.
+Information and data, accounts and identity, encryption and applications are the responsibility of the TRE organisation with network controls and resource allocation shared between the TRE operator, the FRIDGE hosting organisation and the resource allocator.
 
 ![FRIDGE TRE Boundary Shared Responsibility Model](FRIDGE_Images/Fridge_Shared_Responsibility_Model.drawio.svg)
 
