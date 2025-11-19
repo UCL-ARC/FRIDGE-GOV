@@ -84,7 +84,7 @@ graph TD
 - Monitor security and performance across the federation
 - Coordinate changes to the FRIDGE platform
 
-**Reference:** [Safe Project Process - Section 4.1](FRIDGE_SAFE_Project_Process.md#41-operational-management-group)
+**Reference:** [Roles Catalogue](FRIDGE_Governance_Extension_Architecture.md#2-roles)
 
 ---
 
