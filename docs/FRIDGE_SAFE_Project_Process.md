@@ -3,8 +3,8 @@
 **Version:** 1.0  
 **Target Infrastructure:** UK AIRR (Dawn, Isambard-AI)  
 **Compliance:** SATRE Specification, NHS DSP Toolkit  
-**Frequency:** Once per project 
-**Target Duration:** 1 week
+**Frequency:** Once per project <br>
+**Target Duration:** 1 week <br>
 **Prerequisites:** [Safe Setting Process](FRIDGE_Safe_Setting_Process.md) complete - TRE Operator must have Safe Setting approval
 
 ## 1. Overview
