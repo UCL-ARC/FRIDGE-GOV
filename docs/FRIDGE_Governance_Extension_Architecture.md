@@ -39,7 +39,7 @@ Roles Catalogue
 |R10 | Job Submitter | [DARE UK Federated Blueprint](https://zenodo.org/records/14192786)| Within the scope of the FRIDGE architecture this role requires the data consumer role. See [Safe Project Process](FRIDGE_SAFE_Project_Process.md) |
 
 
-2. Shared Responsibility Model
+## 2. Shared Responsibility Model
 
 Below is a high level view of key responsibilities across the tree key organisations.
 
