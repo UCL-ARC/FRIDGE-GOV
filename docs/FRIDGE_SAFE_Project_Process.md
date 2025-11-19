@@ -90,7 +90,7 @@ graph TD
 
 See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extension_Architecture.md#2-roles) for detailed role definitions.
 
-### 2.1 [Resource Allocator (Resource Owner)](FRIDGE_Governance_Extension_Architecture.md#2-roles)
+### 3.1 [Resource Allocator (Resource Owner)](FRIDGE_Governance_Extension_Architecture.md#2-roles)
 - **Primary Responsibility:** Resource allocation and strategic alignment
 - **Key Activities:** 
   - Approve compute resource requests
@@ -98,7 +98,7 @@ See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extensi
   - Monitor resource utilisation
   - Manage allocation lifecycle
 
-### 2.2 [TRE Operator Organisation](FRIDGE_Governance_Extension_Architecture.md#2-roles)
+### 3.2 [TRE Operator Organisation](FRIDGE_Governance_Extension_Architecture.md#2-roles)
 - **Primary Responsibility:** Infrastructure management and technical governance
 - **Key Activities:**
   - Operate Front Door TRE and FRIDGE TRE
@@ -108,7 +108,7 @@ See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extensi
   - Maintain SATRE compliance
 - **Accountable for:** [Front Door TRE Boundary](FRIDGE_Governance_Extension_Architecture.md#23-front-door-tre-boundary), [FRIDGE TRE Boundary](FRIDGE_Governance_Extension_Architecture.md#26-fridge-tre-boundary) (shared)
 
-### 2.3 [Data Provider (Information Asset Owner)](FRIDGE_Governance_Extension_Architecture.md#2-roles)
+### 3.3 [Data Provider (Information Asset Owner)](FRIDGE_Governance_Extension_Architecture.md#2-roles)
 - **Primary Responsibility:** Data governance and information asset management
 - **Key Activities:**
   - Define data access requirements
@@ -117,7 +117,7 @@ See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extensi
   - Manage data lifecycle and retention
 - **Accountable for:** [TRE Project Boundary](FRIDGE_Governance_Extension_Architecture.md#24-tre-project-boundary) (shared)
 
-### 2.4 [FRIDGE Hosting Organisation](FRIDGE_Governance_Extension_Architecture.md#2-roles)
+### 3.4 [FRIDGE Hosting Organisation](FRIDGE_Governance_Extension_Architecture.md#2-roles)
 - **Primary Responsibility:** Provisioning and securing of resources on FRIDGE hosting facility
 - **Key Activities:**
   - Provision compute resources on AIRR infrastructure (Dawn, Isambard-AI)
@@ -358,121 +358,3 @@ See [FRIDGE Governance Architecture - Roles Catalogue](FRIDGE_Governance_Extensi
 - Data disposal certificate
 
 ---
-
-## 5. Governance and Escalation
-
-### 4.1 Operational Management Group
-**Composition:** Representatives from all four organisations  
-**Frequency:** As needed
-**Purpose:**
-- Review ongoing projects
-- Address cross-organisational issues
-- Ensure continued compliance
-- Adapt processes based on lessons learned
-
-### 4.2 Escalation Path
-**Level 1:** TRE Operator Organisation (day-to-day issues)  
-**Level 2:** Operational Management Group (cross-organizational issues)  
-**Level 3:** Top Management (governance boundary issues)
-
-## 6. Quality Assurance and Compliance
-
-### 5.1 Continuous Monitoring
-- **TRE Operator:** Technical security monitoring, infrastructure health
-- **Data Provider:** Data access auditing, compliance monitoring
-- **Resource Allocator:** Resource utilisation tracking, allocation efficiency
-- **FRIDGE Hosting Organisation:** Infrastructure security monitoring, resource isolation verification
-
-### 5.2 Periodic Reviews
-- Regular compliance audits
-- Governance framework reviews
-- Post-project retrospectives
-
-### 5.3 Documentation Requirements
-All four organisations must maintain:
-- Decision logs and approvals
-- Audit trails
-- Incident reports
-- Change management records
-
-## 7. Key Success Factors
-
-1. **Clear Communication:** Regular coordination between all four organisations
-2. **Defined Responsibilities:** Unambiguous accountability for each process step
-3. **Standardised Documentation:** Consistent templates and procedures
-4. **Automated Controls:** Where possible, technical enforcement of policies
-5. **Continuous Improvement:** Regular process reviews and updates
-
-## 8. Appendices
-
-**Note:** "Authorisation" and "organisation" use UK English spelling throughout this document.
-
-### Appendix A: Document Templates
-- Project Proposal Template
-- Governance Framework Template
-- Output Review Request Template
-- Project Closure Report Template
-
-### Appendix B: Contact Points
-[To be defined per implementation]
-
-### Appendix C: Compliance Checklist
-[To be developed based on SATRE and NHS standards]
-
-### Appendix D: Researcher Onboarding Process
-
-**Note:** This is a separate process that runs independently from the Safe project provisioning workflow. Researchers must complete onboarding before accessing any project data.
-
-#### Researcher Onboarding Workflow
-
-**Lead:** TRE Operator Organisation  
-**Involves:** Data Provider, Researcher
-
-**Prerequisites:**
-- Project must be provisioned (Phase 2 complete)
-- Researcher must be named in approved project application
-
-**Steps:**
-
-1. **Onboarding Request:**
-   - PI or project administrator requests onboarding for researcher
-   - Researcher identity verified
-
-2. **Training and Certification:**
-   - Researcher completes mandatory training:
-     - TRE usage and security requirements
-     - Data handling obligations specific to the project
-     - Job submission procedures
-     - Output review process
-   - Researcher passes assessment
-   - Training completion certificate issued
-
-3. **Agreement Signing:**
-   - Researcher reviews and signs user agreement
-   - Acknowledges data handling responsibilities
-   - Accepts terms of use
-
-4. **Account Provisioning:**
-   - TRE Operator creates user account
-   - Assigns appropriate roles:
-     - Data Consumer role (all researchers)
-     - Job Submitter role (if approved)
-   - Configures access permissions
-
-5. **Access Activation:**
-   - Researcher receives credentials
-   - Access to Front Door TRE enabled
-   - Access to project data granted
-
-**Outputs:**
-- Training completion certificate
-- Signed user agreement
-- Active researcher account with appropriate roles
-- Access credentials
-
-**Timeline:** Typically 1-2 weeks from request to access activation
-
-**Ongoing Requirements:**
-- Regular training refresher
-- Periodic access reviews
-- Compliance with data handling obligations
