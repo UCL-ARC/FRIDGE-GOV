@@ -175,3 +175,11 @@ re-number 2. Boundaries to 3 as I have added a section
 Prompt 45:
 ensure numbering is correct in docs\FRIDGE_SAFE_Project_Process.md
 
+
+Prompt 46:
+this section isn;t correct. ## 5. Governance Processes. This should briefly describe the process for setting up governance rather than the processes described in the rest of the repo. so, identify sponsorship within the data provider / asset owner org, TRE operator org and fridge hosting org, identify a risk framework and the establishment of the groups themselves
+
+
+Prompt 47:
+Make this section shorter with brief descriptions of the stages
+

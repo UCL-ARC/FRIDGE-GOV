@@ -218,32 +218,37 @@ graph TD
 
 ---
 
-## 5. Governance Processes
+## 5. Establishing Governance
 
-The FRIDGE governance framework is implemented through three key processes:
+This section describes the process for setting up the FRIDGE governance structure.
 
-### 5.1 [Safe Setting Process](FRIDGE_Safe_Setting_Process.md)
-**Purpose:** Approve TRE Operators to host TREs on FRIDGE platform  
-**Frequency:** Once per TRE Operator (or when deployment pattern changes)  
-**Key Decision:** Safe Setting approval by FRIDGE Hosting Organisation and Resource Allocator
+### 5.1 Identify Organisational Sponsorship
 
-### 5.2 [Safe Project Process](FRIDGE_SAFE_Project_Process.md)
-**Purpose:** Establish and operate Safe projects with sensitive data  
-**Frequency:** Once per project  
-**Target Duration:** 1 week 
-**Key Decisions:** 
-- Data access approval by Data Provider
-- Resource allocation approval by Resource Allocator
-- Project provisioning by TRE Operator
+Each key organisation identifies:
+- Executive sponsor with accountability
+- Operational Management Group representative
+- Decision-making authority
 
-### 5.3 [Safe Researcher Process](FRIDGE_Safe_Researcher_Process.md)
-**Purpose:** Approve and onboard Safe researchers  
-**Frequency:** Once per researcher  
-**Target Duration:** 48 hours  
-**Key Decisions:**
-- Researcher approval by Data Provider (or delegated to TRE Operator)
-- Training completion verification
-- Access provisioning by TRE Operator
+### 5.2 Establish Risk Framework
+
+Define risk management approach:
+- **Risk Ownership:** Top Management (strategic), individual organisations (operational), Operational Management Group (shared)
+- **Risk Assessment:** Identify risks, assess impact, define risk appetite
+- **Risk Controls:** Map controls to boundaries, establish monitoring and incident response
+
+### 5.3 Form Governance Groups
+
+**Top Management:**
+- Identify senior representatives from each organisation
+- Define governance boundary scope and charter
+- Approve governance framework and risk approach
+
+**Operational Management Group:**
+- Nominate operational representatives from each organisation
+- Define terms of reference and decision-making authority
+- Document shared responsibility matrix and escalation procedures
+
+**Reference:** See [Implementation Guide - Phase 1](FRIDGE_Implementation_Guide.md#phase-1-establish-governance-structure) for detailed implementation steps.
 
 ---
 
