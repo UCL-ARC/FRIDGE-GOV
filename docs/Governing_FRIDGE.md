@@ -8,6 +8,43 @@
 
 This document defines the governance structure for the FRIDGE (Federated Research Infrastructure by Data Governance Extension) federation. It establishes the hierarchical management framework and operational processes that ensure secure, compliant access to sensitive data on AI supercomputing resources.
 
+### 1.1 Governance Structure Diagram
+
+```mermaid
+graph TD
+    TopMgmt[Top Management<br/>Strategic Direction & Governance Boundary]
+    
+    OMG[Operational Management Group<br/>Cross-organisational Coordination]
+    
+    RA[Resource Allocator]
+    FH[FRIDGE Hosting Organisation]
+    TRE[TRE Operator Organisation]
+    DP[Data Provider]
+    
+    TopMgmt -->|Strategic oversight| OMG
+    
+    OMG --- RA
+    OMG --- FH
+    OMG --- TRE
+    OMG --- DP
+    
+    OMG -.->|Escalate| TopMgmt
+    
+    style TopMgmt fill:#ff9999
+    style OMG fill:#ffeb99
+    style RA fill:#cce5ff
+    style FH fill:#cce5ff
+    style TRE fill:#cce5ff
+    style DP fill:#cce5ff
+```
+
+#### Diagram Legend:
+- **Red box**: Top Management (strategic level)
+- **Yellow box**: Operational Management Group (coordination level)
+- **Light blue boxes**: Four member organisations
+- **Solid lines**: Membership/reporting
+- **Dotted line**: Escalation path
+
 ## 2. Governance Hierarchy
 
 ### 2.1 Top Management
@@ -149,45 +186,6 @@ This document defines the governance structure for the FRIDGE (Federated Researc
 ## 4. Governance Framework
 
 As the governance for the front door TRE is extended into the FRIDGE hosting organisation, the security of the overall system may be affected by changes to the hosting organisation's environment. The Operational Management Group ensures that concerns from all organisations are considered and addressed.
-
-### 4.0 Governance Structure Diagram
-
-```mermaid
-graph TD
-    TopMgmt[Top Management<br/>Strategic Direction & Governance Boundary]
-    
-    OMG[Operational Management Group<br/>Cross-organisational Coordination]
-    
-    RA[Resource Allocator]
-    FH[FRIDGE Hosting Organisation]
-    TRE[TRE Operator Organisation]
-    DP[Data Provider]
-    
-    TopMgmt -->|Strategic oversight| OMG
-    
-    OMG --- RA
-    OMG --- FH
-    OMG --- TRE
-    OMG --- DP
-    
-    OMG -.->|Escalate| TopMgmt
-    
-    style TopMgmt fill:#ff9999
-    style OMG fill:#ffeb99
-    style RA fill:#cce5ff
-    style FH fill:#cce5ff
-    style TRE fill:#cce5ff
-    style DP fill:#cce5ff
-```
-
-#### Diagram Legend:
-- **Red box**: Top Management (strategic level)
-- **Yellow box**: Operational Management Group (coordination level)
-- **Light blue boxes**: Four member organisations
-- **Solid lines**: Membership/reporting
-- **Dotted line**: Escalation path
-
----
 
 ### 4.1 Key Governance Principles
 

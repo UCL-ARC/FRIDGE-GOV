@@ -183,3 +183,7 @@ this section isn;t correct. ## 5. Governance Processes. This should briefly desc
 Prompt 47:
 Make this section shorter with brief descriptions of the stages
 
+
+Prompt 48:
+move the diagram in docs\FRIDGE_Implementation_Guide.md to the  into the overview sction and renumber
+
