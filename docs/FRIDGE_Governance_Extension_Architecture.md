@@ -25,17 +25,18 @@ The researcher works within the front door TRE and, if they have the job submitt
 
 Roles Catalogue
 
-|Role | Source / Definition | Specialisation|
-|------|---------|--------------|
-|Data Consumer (synonymous with Researcher)| [SATRE](https://satre-specification.readthedocs.io/en/latest/roles.html#project-roles)| NA |
-|Data Provider (synonymous with Information Asset Owner) | [SATRE](https://satre-specification.readthedocs.io/en/stable/roles.html#data-management-roles)| Responsible for data governance and approving data access requests |
-|Principal Investigator (PI) | FRIDGE Safe Project Process | Leads research projects, submits Safe project applications, nominates researchers |
-|Job Submitter | [DARE UK Federated Blueprint](https://zenodo.org/records/14192786)| Within the scope of the FRIDGE architecture this role requires the data consumer role |
-|Safe Researcher | FRIDGE Safe Researcher Process | Researcher who has completed training, signed attestation, and been approved for data access |
-|TRE Operator Organisation | The lead organisation providing the TRE all Infrastructure Management and Governance defined in [SATRE](https://satre-specification.readthedocs.io/en/latest/roles.html#project-roles) sit within this org.| Operates Front Door TRE and FRIDGE TRE, manages technical security controls, may receive delegated approval authority from Data Provider |
-|Resource Allocator (Resource Owner) | FRIDGE Safe Project Process | Approves compute resource requests, ensures projects align with AIRR objectives, monitors resource utilisation |
-|FRIDGE Hosting Organisation | The organisation which provides the platform on which the FRIDGE TRE is hosted | Provisions and secures resources on FRIDGE hosting facility (AIRR infrastructure). Specialisations:<br>* **Public Cloud** hosting org. (E.G. AWS, GCP, Azure)<br>* **Private Cloud** provided by the TRE Operator Org.<br>* **National Facility** (E.G. [AIRR](https://www.ukri.org/news/300-million-to-launch-first-phase-of-new-ai-research-resource/)) |
-|Top Management | [SATRE](https://satre-specification.readthedocs.io/en/stable/roles.html#governance-roles) | Within the scope of FRIDGE this role the "Organisation" covered by top management includes the extended governance boundary |
+|Key | Role | Source / Definition | Specialisation|
+|-----|------|---------|--------------|
+|R01 | TRE Operator Organisation | The lead organisation providing the TRE all Infrastructure Management and Governance defined in [SATRE](https://satre-specification.readthedocs.io/en/latest/roles.html#project-roles) sit within this org.| Operates Front Door TRE and FRIDGE TRE, manages technical security controls, may receive delegated approval authority from Data Provider |
+|R02 | FRIDGE Hosting Organisation | The organisation which provides the platform on which the FRIDGE TRE is hosted | Provisions and secures resources on FRIDGE hosting facility (AIRR infrastructure). Specialisations:<br>* **Public Cloud** hosting org. (E.G. AWS, GCP, Azure)<br>* **Private Cloud** provided by the TRE Operator Org.<br>* **National Facility** (E.G. [AIRR](https://www.ukri.org/news/300-million-to-launch-first-phase-of-new-ai-research-resource/)) |
+|R03 | Information Asset Owner (synonymous with Data Provider) | [SATRE](https://satre-specification.readthedocs.io/en/stable/roles.html#data-management-roles)| Responsible for data governance and approving data access requests |
+|R04 | Resource Allocator (Resource Owner) | FRIDGE Safe Project Process | Approves compute resource requests, ensures projects align with AIRR objectives, monitors resource utilisation |
+|R05 | Top Management | [SATRE](https://satre-specification.readthedocs.io/en/stable/roles.html#governance-roles) | Within the scope of FRIDGE this role the "Organisation" covered by top management includes the extended governance boundary |
+|R06 | Operational Management Group | [Governing FRIDGE](Governing_FRIDGE.md#22-operational-management-group) | Representatives from all four key organisations (Resource Allocator, FRIDGE Hosting Organisation, TRE Operator Organisation, Data Provider). Coordinates day-to-day operations, addresses cross-organisational issues, and escalates strategic issues to Top Management |
+|R07 | Principal Investigator (PI) | FRIDGE Safe Project Process | Leads research projects, submits Safe project applications, nominates researchers |
+|R08 | Data Consumer (synonymous with Researcher)| [SATRE](https://satre-specification.readthedocs.io/en/latest/roles.html#project-roles)| NA |
+|R09 | Safe Researcher | FRIDGE Safe Researcher Process | Researcher who has completed training, signed attestation, and been approved for data access |
+|R10 | Job Submitter | [DARE UK Federated Blueprint](https://zenodo.org/records/14192786)| Within the scope of the FRIDGE architecture this role requires the data consumer role |
 
 
 

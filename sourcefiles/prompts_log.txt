@@ -155,3 +155,11 @@ in the implementation guide the safe researcher process is listed as phase 4. th
 Prompt 40:
 make the safe researcher process section in the implementation guide aligned to the other processes and make it shorter. it should have an objecitve section not overview
 
+
+Prompt 41:
+re-order the Roles Catalogue in the following way. TRE Operator org, fridge hosting org, information asset owner, resource allocator, top management, PI, Data consumer, Safe researcher, job submitter and add a key starting with R01
+
+
+Prompt 42:
+add a definition for the Operational Management group from the docs\Governing_FRIDGE.md document into the roles catalogue table in docs\FRIDGE_Governance_Extension_Architecture.md after Top management and before PI
+
