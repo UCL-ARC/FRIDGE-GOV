@@ -54,7 +54,7 @@ The Alan Turing Institute, as TRE Operator Organisation, is accountable for:
 | **Project Boundaries** | • Establish project workspaces<br/>• Implement project isolation<br/>• Manage project lifecycle<br/>• Coordinate with Data Providers | • 1.3.7, 1.3.8, 4.1.1, 9.5.3, 9.6.1, 8.4.1 <br/> • 4.1.1, 4.2.4, 9.5.1, 9.6.1, 9.3.5, 1.3.7 <br/> • 1.1.2, 1.3.7, 4.2.4, 4.4.1, 9.5.3, 1.4.1, 1.4.3 <br/> • 1.1.2, 10.1.2, 10.2.2, 10.2.5, 1.2.4, 9.3.6 | [TRE Project Boundary](../FRIDGE_Governance_Extension_Architecture.md#34-tre-project-boundary) |
 | **Governance & Compliance** | • Maintain SATRE compliance<br/>• Implement information governance<br/>• Conduct output reviews<br/>• Manage researcher training<br/>• Maintain audit trails | • 4.5.3, 4.4.1, 8.4.1, 8.3.5, 9.2.1, 7.1.2, 10.2.1 <br/> • 1.1.2, 1.1.5, 1.3.1, 1.3.2, 1.3.6, 1.4.1, 6.1.1, 10.2.2 <br/> • 2.1.1, 3.1.1, 3.2.1, 3.3.1, 3.4.1 <br/> • 1.3.7, 1.1.2, 4.4.1, 6.1.1, 9.3.6, 10.2.2 <br/> • 4.4.1, 4.3.3, 6.1.1, 6.3.5, 9.5.3, 9.6.1, 1.4.3, 10.2.2 | [Governing FRIDGE](../Governing_FRIDGE.md) |
 
-[DSPT Controls reference file]("./Images/DSPT controls.xlsx")
+[DSPT Controls reference file](sourcefiles/DSPT_controls.xlsx)
 
 ### 2.2 Cambridge Open Zettascale Lab Responsibilities
 
@@ -68,6 +68,8 @@ Cambridge Open Zettascale Lab, as FRIDGE Hosting Organisation, is accountable fo
 | **Network Infrastructure** | • Provide network connectivity<br/>• Maintain network hardware<br/>• Implement base network security<br/>• Monitor network performance<br/>• Manage network incidents | • 9.1.1, 9.6.1 <br/> • 9.1.1, 8.4.2 <br/> • 9.6.1, 9.3.5 <br/> • 6.3.1 <br/> • 6.1.1, 6.1.2 | [FRIDGE TRE Hosting Boundary](../FRIDGE_Governance_Extension_Architecture.md#35-fridge-tre-hosting-boundary) |
 | **Platform Services** | • Operate Dawn platform services<br/>• Maintain service availability<br/>• Implement platform monitoring<br/>• Manage platform updates<br/>• Provide platform support | • 8.4.1, 8.3.5 <br/> • 7.1.1, 7.1.2 <br/> • 6.1.1, 6.3.5 <br/> • 8.3.5, 8.1.4, 9.4.4 <br/> • 10.1.2, 10.2.1 | [FRIDGE TRE Hosting Boundary](../FRIDGE_Governance_Extension_Architecture.md#35-fridge-tre-hosting-boundary) |
 | **Capacity Management** | • Manage compute capacity<br/>• Monitor resource utilisation<br/>• Plan capacity expansion<br/>• Allocate resources per agreements<br/>• Report on capacity | • 7.1.1 <br/> • 6.3.5 <br/> • 7.1.1, 7.2.1 <br/> • 4.1.1, 4.2.4 <br/> • 7.1.1, 5.2.1 | [Safe Project Process](../FRIDGE_SAFE_Project_Process.md) |
+
+[DSPT Controls reference file](sourcefiles/DSPT_controls.xlsx)
 
 ### 2.3 Shared Responsibilities
 
