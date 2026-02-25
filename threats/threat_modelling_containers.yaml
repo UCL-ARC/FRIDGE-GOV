@@ -1,0 +1,122 @@
+title: FRIDGE
+ 
+risk: calc
+ 
+goals:
+  - attacker_reads_sensitive_data:
+    from:
+      - copy_decrypted_data_from_storage
+      - attacker_can_decrypt
+ 
+facts:
+  - hpc_admins_god: HPC admins are god
+  - post_quantum_decryption:
+    from:
+      - reality: <0.01>
+  - rely_on_third_party_containers:
+  - must_support_user_containers:
+  - must_support_user_commands:
+  - TRE_operators:
+ 
+attacks:
+  - phish_admins:
+    from:
+      - hpc_admins_god
+  - rogue_god_on_hpc:
+    from:
+      - phish_admins
+      - social_engineering
+      - hpc_admins_god: if evil
+  - access_encrypted_data:
+    from:
+      - rogue_god_on_hpc
+      - malicious_code_in_container
+      - supply_chain_attack_for_containers
+      - malicious_user_launching_job
+      - host_access_from_container
+  - make_local_copy_of_encrypted_data:
+    from:
+      - access_encrypted_data
+  - send_copy_of_encrypted_data_externally:
+    from:
+      - access_encrypted_data
+      - remove_network_policy
+  - copy_decrypted_data_from_storage:
+    from:
+      - rogue_god_on_hpc
+  - copy_keys:
+    from: 
+      - rogue_god_on_hpc
+  - attacker_can_decrypt:
+    from:
+      - access_encrypted_data:
+        required: true
+      - copy_keys
+      - break_encryption
+      - make_local_copy_of_encrypted_data
+  - break_encryption:
+    from:
+      - post_quantum_decryption
+  # Container attacks
+  - host_access_from_container:
+    from:
+      - malicious_user_launching_job
+  - compromise_privileged_services: # Attempting to compromise services which have less resitrictive PSS (e.g. Minio, Longhorn)
+    from:
+      - malicious_user_launching_job
+  - read_kubernetes_secrets:
+    from:
+      - rogue_god_on_hpc
+  - compromise_kubernetes_api: # Find a way to change kubernetes state
+    from:
+      - malicious_user_launching_job
+      - TRE_operators
+      - read_kubernetes_secrets
+  - make_changes_to_kubernetes_state: # For example, remove network policy
+    from:
+      - compromise_kubernetes_api
+  - remove_network_policy:
+    from:
+      - make_changes_to_kubernetes_state
+  - malicious_code_in_container: # _I_ made a malicious container
+    from:
+      - must_support_user_containers: if evil
+  - supply_chain_attack_for_containers: # Someone compromised the developers
+    from:
+      - rely_on_third_party_containers
+  - social_engineering:
+  - malicious_user_launching_job: # I launch a container with a 'malicious' command,
+    from:
+      - must_support_user_commands: if evil
+      - social_engineering
+ 
+mitigations:
+  - encrypt_sensitive_data:
+    from:
+      - copy_decrypted_data_from_storage: <1>
+  - mfa:
+    from:
+      - phish_admins: <0.5>
+  - isolated_network_no_outbound:
+    from:
+      - send_copy_of_encrypted_data_externally: <1>
+  - pod_security_standards_and_admission:
+    description: Enforces container standards, like no user <1000 no host net access
+    from:
+      - host_access_from_container
+  - network_policy:
+    from:
+      - compromise_privileged_services
+      - compromise_kubernetes_api
+  - kubernetes_RBAC:
+    from:
+      - compromise_privileged_services
+      - compromise_kubernetes_api
+  - scan_images:
+    from:
+      - malicious_code_in_container: <0>
+      - supply_chain_attack_for_containers: <0>
+  - check_image_signatures:
+    from:
+      - malicious_code_in_container: <0>
+      - supply_chain_attack_for_containers: <0>
