@@ -1,4 +1,4 @@
-# DSPT Controls reference document
+# DSPT Controls Reference Document
 | Ref | Requirement | Guidance | Mandatory Status |
 |------|--------------------------|-----------|-----------|
 |1.1.1 | What is your organisation's Information Commissioner's Office (ICO) registration number? | Registration with the ICO is a legal requirement for every organisation that uses or shares personal information, unless they are exempt as a small charity.  If your organisation is not already registered, you should [register as a matter of urgency](https://ico.org.uk/for-organisations/data-protection-fee/). <br/> You can check whether you are registered and what your ICO registration number is on the [Information Commissioner's Office website](https://ico.org.uk/esdwebpages/search). | Mandatory |
