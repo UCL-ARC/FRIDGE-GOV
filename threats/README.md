@@ -6,7 +6,7 @@ The primary reason for threat modeling FRIDGE is to understand how risks can be 
 
 ### Attack Tree Modeling
 
-To understand the attacks possible, the method used is to model an "attack tree" - the combinatorial means by which an attacker might try to achieve their goals. The tool used is [Deciduous](https://kellyshortridge.com/blog/posts/deciduous-attack-tree-app/), with modifications developed at UCL to allow calculation of the risks associated with `attacks` and affected by `mitigations`.
+To understand the attacks possible, the method used is to model an "attack tree" - the combinatorial means by which an attacker might try to achieve their goals. The tool used is [Deciduous](https://kellyshortridge.com/blog/posts/deciduous-attack-tree-app/), with modifications [developed at UCL](https://github.com/gsvarovsky/deciduous) to allow calculation of the risks associated with `attacks` and affected by `mitigations`.
 
 The attack tree models the attacker goals of exfiltrating or intercepting sensitive data:
 
@@ -14,7 +14,7 @@ The attack tree models the attacker goals of exfiltrating or intercepting sensit
 
 - The source code for this generated image is [fridge.deciduous.yaml](./fridge.deciduous.yaml).
 - Risk effects generally assume a motivated attacker, the risk of an attack reflecting its practical difficulty.
-- The risk probability shown in the model assumes a continuous 0..1 scale. Due to [limitations](#limitations) of the tool, these values are no more than prompts for discussion at this stage.
+- The risk probability shown in the model assumes a continuous 0..1 scale. Due to [limitations](https://github.com/gsvarovsky/deciduous/issues) of the tool, these values are primarily prompts for discussion.
 - Discussions were conducted at two workshops with the FRIDGE team.
 
 ## Findings
@@ -28,9 +28,3 @@ These findings represent highlights from the attack tree modeling discussions.
    - Apply TRE-grade policy, procedure and technical controls to HPC administration
 2. Generally, malware in containers has limited effect due to network policies and RBAC - even if the malware is insider-created, collusion is required with a local administrator to exploit an egress channel. This also limits the need to scan images and/or check image signatures.
    - Container breakout generally has the same profile, but may allow an attacker to exploit other workloads on the HPC facility, including other instances of FRIDGE, for an egress channel, without the need to collude with an administrator.
-
-## Limitations
-
-Tool limitations (enhancements):
-- Use of `required` (AND) generates wrong likelihoods if the inputs share provenance. E.g. attacker is admin [low] -> attacker decrypts with key from file AND attacker is admin [low] -> attacker accesses encrypted files, result: low * low instead of just low.
-- Use of `sufficient` and `required` is sometimes inadequate to express intended combinations.

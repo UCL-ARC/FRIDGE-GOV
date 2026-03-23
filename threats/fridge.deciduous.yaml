@@ -14,9 +14,8 @@ goals:
   - exfiltrate_sensitive_data:
     from:
       - attacker_has_clear_text:
-      - ext_access_network:
         required: true
-        sufficient: false
+      - ext_access_network:
   - intercept_sensitive_data:
     from:
       - internet_mitm
@@ -125,10 +124,8 @@ attacks:
     from:
       - attacker_can_decrypt:
         required: true
-        sufficient: false
       - access_stored_data:
         required: true
-        sufficient: false
 
 mitigations:
   - internet_traffic_encrypted: All internet traffic is encrypted (SSH)
